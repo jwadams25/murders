@@ -1,0 +1,39 @@
+---
+title: "Report on Gun Murders"
+author: "John Adams"
+date: "7/23/2018"
+output: html_document
+---
+
+## R Markdown
+
+This is a sample R Markdown document generated while taking HarvardX: PH125.5x
+
+# Load Library and Dataset
+
+```{r load library, echo=FALSE}
+library(tidyverse)
+load("rda/murders.rda")
+```
+
+# Produce Visualizations
+### Visualization with code
+This first example is one that produces the visualization with the code because it doesn't have echo=FALSE after murders. 
+```{r murders plot no code} 
+
+murders %>% mutate(abb = reorder(abb,rate)) %>%
+  ggplot(aes(abb, rate)) +
+          geom_bar(width = 0.5, stat = "identity", color = "black") +
+          coord_flip()
+```
+
+### Visualization without code
+The addition of echo = FALSE prevents code from showing up on the presentation. 
+```{r pressure, echo=FALSE}
+murders %>% mutate(abb = reorder(abb,rate)) %>%
+  ggplot(aes(abb, rate)) +
+          geom_bar(width = 0.5, stat = "identity", color = "black") +
+          coord_flip()
+```
+
+
