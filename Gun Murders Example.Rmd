@@ -2,12 +2,12 @@
 title: "Gun Murders Example"
 author: "John Adams"
 date: "7/23/2018"
-output: html_document
+output: github_document
 ---
 
 # R Markdown
 
-##This is a sample R Markdown document generated while taking HarvardX: PH125.5x
+This is a sample R Markdown document generated while taking HarvardX: PH125.5x
 
 # Load Library and Dataset
 
